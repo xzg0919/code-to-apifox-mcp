@@ -1,0 +1,31 @@
+{
+  "app": {
+    "name": "doc-mcp",
+    "port": 8080
+  },
+  "apifox": {
+    "api": {
+      "baseUrl": "https://api.apifox.com",
+      "version": "2024-03-28"
+    }
+  },
+  "mcp": {
+    "server": {
+      "enabled": true,
+      "stdio": false,
+      "name": "doc-mcp-server",
+      "version": "1.0.0",
+      "instructions": "This MCP server provides functionality to generate Swagger JSON and upload to ApiFox",
+      "type": "SYNC",
+      "capabilities": {
+        "tool": true,
+        "resource": false,
+        "prompt": false,
+        "completion": false
+      }
+    }
+  },
+  "logging": {
+    "level": "DEBUG"
+  }
+}
