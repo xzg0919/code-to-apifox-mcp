@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "doc-mcp",
-    "port": 8080
+    "port": 3033
   },
   "apifox": {
     "api": {

@@ -1,0 +1,35 @@
+# 开发文件
+test/
+*.test.js
+.idea/
+.vscode/
+
+# 参考文件
+reference/
+
+# 验证文档
+VERIFICATION.md
+
+# 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 临时文件
+.tmp/
+.cache/
+
+# OS文件
+.DS_Store
+Thumbs.db
+
+# Node modules (npm会自动忽略)
+node_modules/
+
+# 开发配置
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

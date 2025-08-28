@@ -1,8 +1,11 @@
 {
-  "name": "doc-mcp",
-  "version": "0.0.1",
+  "name": "code-to-apifox-mcp",
+  "version": "0.0.2",
   "description": "Doc-MCP: Swagger to ApiFox MCP Server - Node.js版本",
   "main": "src/index.js",
+  "bin": {
+    "code-to-apifox-mcp": "src/index.js"
+  },
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
@@ -10,11 +13,24 @@
     "start:http": "node src/index.js",
     "dev": "node --watch src/index.js",
     "dev:stdio": "node --watch src/index.js --stdio",
-    "test": "node --test test/**/*.test.js"
+    "test": "node --test test/SwaggerUploadService.test.js",
+    "prepublishOnly": "npm test"
   },
-  "keywords": ["mcp", "swagger", "apifox", "api", "documentation"],
-  "author": "",
+  "keywords": [
+    "mcp",
+    "swagger",
+    "apifox",
+    "api",
+    "documentation"
+  ],
+  "author": "xiangzgi",
   "license": "MIT",
+  "files": [
+    "src/",
+    "config/",
+    "resources/",
+    "README.md"
+  ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.5.0",
     "axios": "^1.6.0",
@@ -25,5 +41,16 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xzg0919/code-to-apifox-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xzg0919/code-to-apifox-mcp/issues"
+  },
+  "homepage": "https://github.com/xzg0919/code-to-apifox-mcp#readme"
 }
