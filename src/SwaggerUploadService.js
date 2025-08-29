@@ -68,6 +68,14 @@ export class SwaggerUploadService {
 
 6. **数据模型 (definitions)**：请求/响应的数据结构
 
+配置信息说明：
+可以在项目根目录创建code-to-apifox.json文件来配置默认的ApiFox项目ID和访问令牌：
+{
+  "projectId": "your-project-id",
+  "accessToken": "your-access-token"
+}
+如果没有找到此配置文件，则需要在使用uploadSwaggerToApiFox工具时手动输入项目ID和密钥。
+
 完整的Swagger JSON：
 ${swaggerJson}
 
