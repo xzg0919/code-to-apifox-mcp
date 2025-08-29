@@ -1,6 +1,6 @@
 {
   "name": "code-to-apifox-mcp",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Doc-MCP: Swagger to ApiFox MCP Server - Node.js版本",
   "main": "src/index.js",
   "bin": {

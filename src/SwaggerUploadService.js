@@ -69,18 +69,18 @@ export class SwaggerUploadService {
 6. **数据模型 (definitions)**：请求/响应的数据结构
 
 配置信息说明：
-可以在项目根目录创建code-to-apifox.json文件来配置默认的ApiFox项目ID和访问令牌：
+可以在项目根目录查找code-to-apifox.json文件来获取默认的ApiFox项目ID和访问令牌：
 {
   "projectId": "your-project-id",
   "accessToken": "your-access-token"
 }
-如果没有找到此配置文件，则需要在使用uploadSwaggerToApiFox工具时手动输入项目ID和密钥。
+如果没有找到此配置文件，则需要在使用uploadSwaggerToApiFox工具时让用户手动输入项目ID和密钥。
 
 完整的Swagger JSON：
 ${swaggerJson}
 
 使用说明：
-- 参考此格式创建你自己的API文档
+- 参考此格式生成你自己的API文档，不要创建文件
 - 修改info部分的基本信息
 - 定义你的API路径和方法
 - 创建相应的数据模型
@@ -97,7 +97,7 @@ ${swaggerJson}
    - 准确识别接口返回类型，如果有包装类应该使用包装类进行封装
    - 包括所有必填和可选参数，以及正确的数据类型
    - 确保响应模型与实际返回的数据结构完全一致
-   - 应避免无意义的参数 如权限参数或者token之类的公用接口参数
+   - 应避免传入或查看无意义的参数 如数据权限或者token之类的参数
 
 3. **随机模型名称**：
    - 生成的参数和返回的数据模型应该使用随机的模型名称

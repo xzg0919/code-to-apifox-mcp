@@ -13,6 +13,7 @@
 - 🔄 **双模式运行** - 支持STDIO和HTTP两种连接方式
 - 🌐 **云端部署就绪** - 支持本地开发和生产环境部署
 - 🤖 **AI助手友好** - 专为AI助手设计的工具集成
+- 🔐 **配置文件管理** - 支持通过配置文件管理ApiFox凭据
 
 ## 🚀 快速开始
 
@@ -69,10 +70,19 @@ npm run dev          # HTTP模式
 
 配置完成后，你可以直接在AI助手中使用：
 
+**获取Swagger规范**：
 ```
 请帮我获取Swagger规范示例
 ```
 
+**使用配置文件上传**：
+如果你在项目根目录创建了`code-to-apifox.json`文件：
+```
+请帮我上传API文档到ApiFox
+- Swagger JSON: {...}
+```
+
+**手动指定参数**：
 ```
 请帮我上传API文档到ApiFox：
 - 项目ID: your-project-id
@@ -151,6 +161,8 @@ console.log(result);
 
 **返回**: 包含完整Petstore示例的Swagger规范，以及详细的使用说明和最佳实践建议
 
+**新增**：包含`code-to-apifox.json`配置文件的使用说明
+
 **适用场景**:
 - 学习Swagger规范格式
 - 作为API文档模板
@@ -168,6 +180,28 @@ console.log(result);
 **返回**: 上传结果和详细信息
 
 ## ⚙️ 配置说明
+
+### 默认配置文件（推荐）
+
+在项目根目录创建`code-to-apifox.json`文件来配置默认的ApiFox项目ID和访问令牌：
+
+```json
+{
+  "projectId": "your-project-id",
+  "accessToken": "your-access-token"
+}
+```
+
+**优势**：
+- 🔐 避免每次手动输入凭据
+- 🚀 提高工作效率
+- 📁 支持项目级配置管理
+
+**安全提示**：
+- ⚠️ 不要将此文件提交到版本控制系统
+- 建议添加到`.gitignore`文件中
+
+### 应用配置文件
 
 配置文件位置: `config/config.json`
 
@@ -263,6 +297,12 @@ npx code-to-apifox-mcp --stdio
 - **操作系统**: Windows, macOS, Linux
 
 ## ❓ 常见问题
+
+### Q: 如何使用配置文件管理ApiFox凭据？
+A: 在项目根目录创建`code-to-apifox.json`文件，包含`projectId`和`accessToken`字段。这样在使用`uploadSwaggerToApiFox`工具时就不需要每次都输入凭据。
+
+### Q: 配置文件安全吗？
+A: 建议将`code-to-apifox.json`添加到`.gitignore`文件中，避免意外提交敏感信息到版本控制系统。
 
 ### Q: 如何获取ApiFox的项目ID和访问令牌？
 A: 登录ApiFox，在项目设置 -> 开放API中可以找到项目ID和生成访问令牌。
